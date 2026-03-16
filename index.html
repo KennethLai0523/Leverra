@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leverra Sri Damansara | Pre-Sale by Kenneth Lai & Agnes Chee</title>
+  <meta name="description" content="Pre-sale website for Leverra Sri Damansara residences by professional agents Kenneth Lai and Agnes Chee." />
+  <style>
+    :root {
+      --bg: #f5f3ee;
+      --bg-soft: #efeae0;
+      --card: #ffffff;
+      --text: #131c2d;
+      --muted: #6a6f7b;
+      --line: #ddd6ca;
+      --gold: #b88a3b;
+      --gold-dark: #8c672b;
+      --shadow: 0 14px 40px rgba(17, 24, 39, 0.08);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 72px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #eadfc8;
+      color: var(--gold-dark);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 54px);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: clamp(24px, 3vw, 34px);
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(13, 18, 31, 0.84) 0%, rgba(13, 18, 31, 0.62) 38%, rgba(13, 18, 31, 0.18) 100%),
+        url('5aa71b44-73cf-4fc9-9656-528b9e72e252.png') center/cover no-repeat;
+      color: #fff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 140px;
+      background: linear-gradient(to bottom, rgba(245,243,238,0), var(--bg));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(760px, 100%);
+      padding: 110px 0 100px;
+    }
+
+    .hero .sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.88);
+      max-width: 620px;
+      margin-bottom: 28px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 30px 0;
+    }
+
+    .hero-stat {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(8px);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    .hero-stat span {
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: var(--gold-dark);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .intro-grid,
+    .location-grid,
+    .contact-grid,
+    .feature-grid,
+    .type-grid,
+    .gallery-grid {
+      display: grid;
+      gap: 28px;
+    }
+
+    .intro-grid,
+    .location-grid,
+    .contact-grid {
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+    }
+
+    .frame,
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .frame.soft {
+      background: var(--bg-soft);
+      padding: 16px;
+    }
+
+    .frame img {
+      border-radius: calc(var(--radius) - 10px);
+      object-fit: cover;
+    }
+
+    .copy ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .copy li {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .type-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .type-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .type-card .media {
+      background: var(--bg-soft);
+      padding: 18px;
+    }
+
+    .type-card .media img {
+      border-radius: 18px;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: var(--bg-soft);
+    }
+
+    .type-card .body {
+      padding: 24px;
+      display: grid;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+    }
+
+    .spec {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .spec span {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .spec strong {
+      font-size: 24px;
+    }
+
+    .feature-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 24px;
+      background: var(--card);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow);
+      border: 1px solid #eee7db;
+    }
+
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #efe3cf;
+      color: var(--gold-dark);
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 280px;
+      box-shadow: var(--shadow);
+      background: #ddd;
+    }
+
+    .gallery-card img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8,12,22,0.72), rgba(8,12,22,0.08));
+    }
+
+    .gallery-card span {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      z-index: 1;
+      color: white;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .banner {
+      background: linear-gradient(135deg, #1d2434, #0f1624);
+      color: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .banner p { color: rgba(255,255,255,0.8); }
+
+    .contact-grid .agent-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .agent-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      padding: 28px;
+    }
+
+    .agent-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .agent-card .role {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #efe3cf;
+      color: var(--gold-dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .agent-card .contact-lines {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+      font-weight: 700;
+    }
+
+    .disclaimer {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 16px;
+    }
+
+    footer {
+      padding: 28px 0 50px;
+      border-top: 1px solid var(--line);
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 1080px) {
+      .type-grid,
+      .gallery-grid,
+      .contact-grid .agent-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-grid,
+      .location-grid,
+      .contact-grid,
+      .feature-layout,
+      .banner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .section {
+        padding: 56px 0;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 100px 0 80px;
+      }
+
+      .hero-stats,
+      .specs {
+        grid-template-columns: 1fr;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .gallery-card {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">Pre-Sale • Sri Damansara</div>
+        <h1>LEVERRA<br />Sri Damansara Residences</h1>
+        <p class="sub">
+          A freehold pre-sale opportunity crafted for modern city living, with strong accessibility,
+          retail convenience, greenery, premium facilities, and practical family-friendly layouts.
+        </p>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>500m</strong>
+            <span>Walk to Sri Damansara West MRT</span>
+          </div>
+          <div class="hero-stat">
+            <strong>728 – 1145 sqft</strong>
+            <span>2 to 4-bedroom layouts</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Pre-Sale</strong>
+            <span>Freehold urban residence concept</span>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Book Viewing / Project Briefing</a>
+          <a class="btn btn-secondary" href="#types">See Layouts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container intro-grid">
+      <div class="frame soft">
+        <img src="7e857e9a-e2c3-4ce2-b333-86ade665168f.png" alt="Masterplan view" />
+      </div>
+      <div class="copy">
+        <div class="badge">Why Buyers Are Looking Here</div>
+        <h2>Positioned for convenience, lifestyle, and future value</h2>
+        <p>
+          Leverra is presented as a pre-sale residential offering in the Bandar Sri Damansara area,
+          designed around transport accessibility, mature township convenience, nearby retail, park-facing surroundings,
+          and practical configurations for own-stay buyers as well as long-term investors.
+        </p>
+        <ul>
+          <li>Covered access within walking distance to MRT connectivity</li>
+          <li>Near established amenities, shopping, dining, and daily essentials</li>
+          <li>Comfortable modern layouts from compact to family-sized units</li>
+          <li>Suitable for buyers seeking a balanced live-work-lifestyle address</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="location">
+    <div class="container location-grid">
+      <div class="frame soft">
+        <img src="cb8b3c06-404e-4f5b-8dd2-400569f4122b.png" alt="Location map of Leverra in Sri Damansara" />
+      </div>
+      <div class="copy">
+        <div class="badge">Prime Location</div>
+        <h2>In the heart of an established urban corridor</h2>
+        <p>
+          The surrounding area connects residents to MRT access, green spaces, retail conveniences,
+          and major road networks, making it attractive for both daily commuters and family living.
+        </p>
+        <ul>
+          <li>Approx. 500m to MRT access</li>
+          <li>Close to parks, retail, and matured amenities</li>
+          <li>Easy access towards LDP, NKVE, and DUKE corridors</li>
+          <li>Strategic placement between established residential catchments</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="banner">
+        <div>
+          <div class="badge" style="background: rgba(255,255,255,0.12); color: #f7d6a0;">Connectivity</div>
+          <h3>Everything important stays within reach</h3>
+          <p>
+            From MRT accessibility and mature township conveniences to parks, shopping, and daily essentials,
+            this pre-sale concept is built around practical urban living.
+          </p>
+        </div>
+        <div class="frame soft" style="padding: 10px; background: rgba(255,255,255,0.08);">
+          <img src="745883c1-8b95-4022-9e8d-230840662fd6.png" alt="Easy access highway and township connection" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="container feature-layout">
+      <div>
+        <div class="badge">Lifestyle Features</div>
+        <h2>Comfort-led facilities for modern living</h2>
+        <p>
+          The development concept emphasizes daily comfort, wellness, leisure, security, and convenience,
+          giving buyers a more complete pre-sale proposition beyond just the unit itself.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon-box">GY</div>
+          <div>
+            <h3>State-of-the-Art Gym</h3>
+            <p>Fully equipped fitness spaces designed for active lifestyles.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box">50</div>
+          <div>
+            <h3>50m Lap Pool</h3>
+            <p>Resort-inspired leisure and fitness-focused water facilities.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box">LG</div>
+          <div>
+            <h3>Landscaped Gardens</h3>
+            <p>Green spaces designed to support a calmer and more relaxing environment.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box">24</div>
+          <div>
+            <h3>24/7 Security</h3>
+            <p>Round-the-clock security support with controlled access measures.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box">FB</div>
+          <div>
+            <h3>Food & Beverage</h3>
+            <p>Everyday dining and casual lifestyle convenience close to home.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box">RT</div>
+          <div>
+            <h3>Retail & Essentials</h3>
+            <p>Integrated convenience that supports easy everyday living.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="badge">Gallery</div>
+      <h2>A visual preview of the lifestyle proposition</h2>
+      <p style="max-width: 760px; margin-bottom: 28px;">
+        Highlights below reflect the development’s greenery, wellness facilities, transport accessibility,
+        and surrounding liveability appeal for pre-sale buyers.
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-card"><img src="f9b1eec4-0141-491c-812d-91d7e35f3485.png" alt="Park and greenery" /><span>Senses Park</span></div>
+        <div class="gallery-card"><img src="cbe11812-36b5-4c62-b194-05cb62fd850b.png" alt="Lap pool" /><span>50m Lap Pool</span></div>
+        <div class="gallery-card"><img src="acac892f-9182-4944-9476-54501f0c33e1.png" alt="Lifestyle gallery and facilities" /><span>Lifestyle Facilities</span></div>
+        <div class="gallery-card"><img src="05c4e5f7-2812-4859-be91-19e334897390.png" alt="Park image" /><span>Lush Garden</span></div>
+        <div class="gallery-card"><img src="af98f5da-87ca-4ef5-89fb-e547f55f97e7.png" alt="MRT and nearby development" /><span>MRT Walkway</span></div>
+        <div class="gallery-card"><img src="4b54e63a-aa99-4cab-95c9-3d01336d02db.png" alt="Tower rendering" /><span>Skyline Presence</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="types">
+    <div class="container">
+      <div class="badge">Layout Selection</div>
+      <h2>Choose the layout that fits your lifestyle</h2>
+      <p style="max-width: 760px; margin-bottom: 28px;">
+        Different sizes are available to suit first-home buyers, couples, young families,
+        and buyers who need more functional living space.
+      </p>
+      <div class="type-grid">
+        <article class="type-card">
+          <div class="media">
+            <img src="2c92aa23-ece9-48c2-9907-691817b77ad5.png" alt="Type A layout" />
+          </div>
+          <div class="body">
+            <h3>Type A</h3>
+            <p>Well-sized for bachelors, newlyweds, and smaller households seeking a practical starter home.</p>
+            <div class="specs">
+              <div class="spec"><span>Bedrooms</span><strong>2</strong></div>
+              <div class="spec"><span>Bathrooms</span><strong>2</strong></div>
+              <div class="spec"><span>Size</span><strong>720 sqft</strong></div>
+              <div class="spec"><span>Parking</span><strong>1</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="type-card">
+          <div class="media">
+            <img src="a7c2797e-31be-47f8-b2f1-d58c804a4a93.png" alt="Type B layout" />
+          </div>
+          <div class="body">
+            <h3>Type B</h3>
+            <p>Designed for growing households who prefer a more spacious living zone with three bedrooms.</p>
+            <div class="specs">
+              <div class="spec"><span>Bedrooms</span><strong>3</strong></div>
+              <div class="spec"><span>Bathrooms</span><strong>2</strong></div>
+              <div class="spec"><span>Size</span><strong>903 sqft</strong></div>
+              <div class="spec"><span>Parking</span><strong>2</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="type-card">
+          <div class="media">
+            <img src="7f68a67b-a3b2-47f2-b23c-950925f153a5.png" alt="Type C layout" />
+          </div>
+          <div class="body">
+            <h3>Type C</h3>
+            <p>Ideal for larger families who need four bedrooms, more bathrooms, and stronger everyday functionality.</p>
+            <div class="specs">
+              <div class="spec"><span>Bedrooms</span><strong>4</strong></div>
+              <div class="spec"><span>Bathrooms</span><strong>3</strong></div>
+              <div class="spec"><span>Size</span><strong>1145 sqft</strong></div>
+              <div class="spec"><span>Parking</span><strong>2–3</strong></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <div class="badge">Official Contact</div>
+        <h2>Book a viewing or pre-sale briefing with us</h2>
+        <p>
+          This website is presented by Kenneth Lai and Agnes Chee as your professional agents for the project enquiry,
+          pre-sale briefing, unit selection, and buyer follow-up.
+        </p>
+        <p style="margin-top: 18px;">
+          Contact us for latest availability, layout recommendation, pricing discussion, and project presentation.
+        </p>
+      </div>
+      <div class="agent-wrap">
+        <div class="agent-card">
+          <h3>Kenneth Lai</h3>
+          <div class="role">Professional Agent</div>
+          <p>For buyer enquiries, viewing arrangement, project explanation, and unit matching.</p>
+          <div class="contact-lines">
+            <a href="tel:+60166287357">📞 016-628 7357</a>
+            <a href="https://wa.me/60166287357" target="_blank" rel="noopener noreferrer">💬 WhatsApp Kenneth</a>
+          </div>
+        </div>
+        <div class="agent-card">
+          <h3>Agnes Chee</h3>
+          <div class="role">Professional Agent</div>
+          <p>For project briefing, buyer support, appointment scheduling, and purchase consultation.</p>
+          <div class="contact-lines">
+            <a href="tel:+60122895038">📞 012-289 5038</a>
+            <a href="https://wa.me/60122895038" target="_blank" rel="noopener noreferrer">💬 WhatsApp Agnes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p class="disclaimer">
+        Disclaimer: All renderings, layouts, sizes, facilities, and descriptions shown are for presentation and marketing purposes only.
+        Availability, package details, and final developer information are subject to change.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>
+        © Leverra Pre-Sale Website • Presented by Kenneth Lai & Agnes Chee • Professional Agents
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
