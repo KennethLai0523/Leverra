@@ -163,18 +163,7 @@
       gap: 14px;
       margin-top: 18px;
     }
-
-    .btn-whatsapp{
-      background:#25D366;
-      color:white;
-      box-shadow: var(--shadow);
-    }
     
-    .btn-whatsapp:hover{
-      transform: translateY(-1px);
-      background:#1ebe5d;
-    }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -184,23 +173,35 @@
       border-radius: 14px;
       font-weight: 700;
       transition: 0.2s ease;
+      text-decoration: none;
     }
-
+    
     .btn-primary {
       background: var(--gold);
       color: white;
       box-shadow: var(--shadow);
     }
-
+    
     .btn-primary:hover {
       transform: translateY(-1px);
       background: var(--gold-dark);
     }
-
+    
     .btn-secondary {
       border: 1px solid rgba(255,255,255,0.35);
       color: white;
       background: rgba(255,255,255,0.08);
+    }
+    
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    
+    .btn-whatsapp:hover {
+      transform: translateY(-1px);
+      background: #1ebe5d;
     }
 
     .intro-grid,
@@ -613,10 +614,10 @@
           </div>
         </div>
 
-        <div class="hero-buttons">
-          <a href="#contact" class="btn-gold">Book Viewing</a>
-          <a href="#layouts" class="btn-outline">See Layouts</a>
-          <a href="https://wa.me/60166287357" class="btn-whatsapp">WhatsApp</a>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary">Book Viewing</a>
+          <a href="#layouts" class="btn btn-secondary">See Layouts</a>
+          <a href="https://wa.me/60166287357" class="btn btn-whatsapp">WhatsApp</a>
         </div>
       </div>
     </div>
