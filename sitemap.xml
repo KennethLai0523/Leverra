@@ -1,11 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
     <loc>https://leverra-sri-damansara.homes/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-my" href="https://leverra-sri-damansara.homes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leverra-sri-damansara.homes/" />
+
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/Leverra_hero.png</image:loc>
+      <image:title>Leverra Sri Damansara — Freehold Pre-Sale Condominium Hero View</image:title>
+      <image:caption>Leverra Sri Damansara freehold pre-sale condominium 500m to MRT in Bandar Sri Damansara, Kuala Lumpur.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/skyline_leverra.png</image:loc>
+      <image:title>Leverra Sri Damansara Skyline Tower Rendering</image:title>
+      <image:caption>Tower rendering showing the skyline presence of Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/masterplan_leverra_kenneth.png</image:loc>
+      <image:title>Leverra Sri Damansara Masterplan and Location</image:title>
+      <image:caption>Masterplan and location overview of Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/night_lifestyle_DA_leverra_kenneth.png</image:loc>
+      <image:title>Leverra Sri Damansara Night Lifestyle View</image:title>
+      <image:caption>Night lifestyle view of the Leverra Sri Damansara development.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/easyaccess_leverra_kenneth.png</image:loc>
+      <image:title>Easy Highway Access from Leverra Sri Damansara</image:title>
+      <image:caption>Easy access to LDP, NKVE and DUKE highways from Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/50m_swimming_pool_leverra_kenneth.png</image:loc>
+      <image:title>50m Lap Pool at Leverra Sri Damansara</image:title>
+      <image:caption>Resort-style 50m lap swimming pool facility at Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/lifestyle_facility_leverra.png</image:loc>
+      <image:title>Leverra Sri Damansara Lifestyle Facilities</image:title>
+      <image:caption>Lifestyle gallery and resident facilities at Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/senses_park_leverra.png</image:loc>
+      <image:title>Senses Park at Leverra Sri Damansara</image:title>
+      <image:caption>Landscaped Senses Park area at Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/lush_garden_leverra.png</image:loc>
+      <image:title>Lush Landscaped Garden at Leverra Sri Damansara</image:title>
+      <image:caption>Lush landscaped garden surroundings at Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/mrt_walkway_leverra.png</image:loc>
+      <image:title>Covered MRT Walkway from Leverra Sri Damansara</image:title>
+      <image:caption>Covered pedestrian walkway connecting Leverra to Sri Damansara West MRT station.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/typeA_leverra.png</image:loc>
+      <image:title>Leverra Sri Damansara — Type A 2-Bedroom Layout</image:title>
+      <image:caption>Type A 2-bedroom 728 sqft floor plan at Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/typeB_leverra.png</image:loc>
+      <image:title>Leverra Sri Damansara — Type B 3-Bedroom Layout</image:title>
+      <image:caption>Type B 3-bedroom 903 sqft floor plan at Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/typeC_leverra.png</image:loc>
+      <image:title>Leverra Sri Damansara — Type C 4-Bedroom Layout</image:title>
+      <image:caption>Type C 4-bedroom 1145 sqft floor plan at Leverra Sri Damansara.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leverra-sri-damansara.homes/floorplan_leverra.png</image:loc>
+      <image:title>Leverra Sri Damansara Floor Plan Overview</image:title>
+      <image:caption>Detailed floor plan overview for Leverra Sri Damansara residences.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://leverra-sri-damansara.homes/#about</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://leverra-sri-damansara.homes/#location</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://leverra-sri-damansara.homes/#features</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://leverra-sri-damansara.homes/#gallery</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://leverra-sri-damansara.homes/#types</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://leverra-sri-damansara.homes/#faq</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://leverra-sri-damansara.homes/#contact</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
   </url>
 
 </urlset>

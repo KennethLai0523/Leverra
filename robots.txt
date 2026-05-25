@@ -1,0 +1,58 @@
+# robots.txt for https://leverra-sri-damansara.homes/
+# Leverra Sri Damansara — Freehold Pre-Sale Condominium Near MRT
+
+User-agent: *
+Allow: /
+Disallow: /backup_laverra_2337.txt
+Disallow: /leverra_final_website_code.txt
+Disallow: /*.txt$
+
+# Major search engines — explicit allow
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Social previews
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block AI scrapers that consume bandwidth without driving traffic (optional, conservative)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Polite crawl delay for aggressive bots
+Crawl-delay: 1
+
+Sitemap: https://leverra-sri-damansara.homes/sitemap.xml
